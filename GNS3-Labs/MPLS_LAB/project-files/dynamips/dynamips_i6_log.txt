@@ -1,0 +1,50 @@
+Oct 27 02:14:51.752 HYPERVISOR: Release 0.2.15-amd64/Darwin (tag 2015060118)
+Oct 27 02:14:51.752 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49369.
+Oct 27 02:14:51.755 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 27 02:14:51.756 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 27 02:14:51.757 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips 
+Oct 27 02:14:51.757 GENERAL: working_dir=/Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips
+Oct 27 02:14:51.759 HYPERVISOR: exec_cmd: vm create R1 6 c7200 
+Oct 27 02:14:51.759 VM: VM R1 created.
+Oct 27 02:14:51.760 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 2005 
+Oct 27 02:14:51.761 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Oct 27 02:14:51.762 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 02:14:51.763 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Oct 27 02:14:51.764 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Oct 27 02:14:51.765 HYPERVISOR: exec_cmd: vm set_ios R1 /Users/Gautam/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 27 02:14:51.766 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 02:14:51.767 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x63184dd4 
+Oct 27 02:14:51.769 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Oct 27 02:14:51.771 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Oct 27 02:14:51.773 HYPERVISOR: exec_cmd: vm set_config R1 configs/i6_startup-config.cfg 
+Oct 27 02:17:18.377 HYPERVISOR: exec_cmd: nio create_udp udp-5e77582e-3fcb-453a-a827-88550bfd2e53 10009 127.0.0.1 10008 
+Oct 27 02:17:18.378 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-5e77582e-3fcb-453a-a827-88550bfd2e53 
+Oct 27 02:17:18.383 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 02:18:01.113 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Oct 27 02:18:01.115 HYPERVISOR: exec_cmd: vm set_ghost_file R1 c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 27 02:18:01.116 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 02:18:01.117 HYPERVISOR: exec_cmd: vm start R1 
+Oct 27 02:40:24.021 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 02:56:47.579 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 03:29:44.015 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 03:54:46.332 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 03:54:49.114 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 03:54:51.903 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 03:55:11.176 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:29:19.367 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:29:21.523 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:29:21.735 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:29:21.928 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:29:22.129 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:33:11.689 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:34:13.848 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 04:34:13.854 HYPERVISOR: exec_cmd: vm stop R1 
+Oct 27 04:34:20.729 VM: VM R1 shutdown.
+Oct 27 04:34:20.731 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:34:25.932 HYPERVISOR: exec_cmd: vm get_status R1 
+Oct 27 04:34:25.938 HYPERVISOR: exec_cmd: vm extract_config R1 
+Oct 27 04:34:25.949 HYPERVISOR: exec_cmd: vm delete R1 
+Oct 27 04:34:25.949 VM: VM R1 destroyed.
+Oct 27 04:34:25.968 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 27 04:34:26.419 HYPERVISOR: Stopped.
+Oct 27 04:34:26.419 GENERAL: reset done.

@@ -1,0 +1,64 @@
+Oct 27 00:39:10.357 HYPERVISOR: Release 0.2.15-amd64/Darwin (tag 2015060118)
+Oct 27 00:39:10.357 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 62760.
+Oct 27 00:39:10.383 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 27 00:39:10.386 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 27 00:39:10.390 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips 
+Oct 27 00:39:10.390 GENERAL: working_dir=/Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips
+Oct 27 00:39:10.394 HYPERVISOR: exec_cmd: vm create R4-P 4 c7200 
+Oct 27 00:39:10.394 VM: VM R4-P created.
+Oct 27 00:39:10.398 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4-P 2003 
+Oct 27 00:39:10.402 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4-P 
+Oct 27 00:39:10.407 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:10.410 HYPERVISOR: exec_cmd: vm slot_add_binding R4-P 0 0 C7200-IO-FE 
+Oct 27 00:39:10.416 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:10.421 HYPERVISOR: exec_cmd: vm set_idle_pc R4-P 0x63184dd4 
+Oct 27 00:39:10.434 HYPERVISOR: exec_cmd: vm set_ram R4-P 512 
+Oct 27 00:39:10.443 HYPERVISOR: exec_cmd: vm set_ios R4-P /Users/Gautam/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 27 00:39:10.452 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:10.454 HYPERVISOR: exec_cmd: vm slot_add_binding R4-P 3 0 PA-GE 
+Oct 27 00:39:10.456 HYPERVISOR: exec_cmd: vm set_nvram R4-P 512 
+Oct 27 00:39:10.457 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4-P ca04.0f87.0000 
+Oct 27 00:39:10.461 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:10.472 HYPERVISOR: exec_cmd: vm slot_add_binding R4-P 4 0 PA-GE 
+Oct 27 00:39:10.491 HYPERVISOR: exec_cmd: vm set_disk0 R4-P 0 
+Oct 27 00:39:10.503 HYPERVISOR: exec_cmd: vm set_config R4-P configs/i4_startup-config.cfg 
+Oct 27 00:39:10.557 HYPERVISOR: exec_cmd: nio create_udp udp-53a38269-431f-4873-a4e5-4af6fd8c2057 10005 127.0.0.1 10004 
+Oct 27 00:39:10.568 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4-P 3 0 udp-53a38269-431f-4873-a4e5-4af6fd8c2057 
+Oct 27 00:39:10.576 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:10.611 HYPERVISOR: exec_cmd: nio create_udp udp-2101880d-84a5-4f01-a2fc-e6c971f6777a 10006 127.0.0.1 10007 
+Oct 27 00:39:10.617 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4-P 4 0 udp-2101880d-84a5-4f01-a2fc-e6c971f6777a 
+Oct 27 00:39:10.618 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:21.448 HYPERVISOR: exec_cmd: vm set_ghost_status R4-P 2 
+Oct 27 00:39:21.461 HYPERVISOR: exec_cmd: vm set_ghost_file R4-P c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 27 00:39:21.463 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 00:39:21.465 HYPERVISOR: exec_cmd: vm start R4-P 
+Oct 27 02:16:34.741 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 02:16:34.747 HYPERVISOR: exec_cmd: vm stop R4-P 
+Oct 27 02:16:39.508 VM: VM R4-P shutdown.
+Oct 27 02:16:39.510 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 02:18:01.337 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 02:18:01.341 HYPERVISOR: exec_cmd: vm start R4-P 
+Oct 27 02:40:24.032 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 02:56:47.582 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 03:29:44.021 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 03:54:46.339 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 03:54:49.118 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 03:54:51.910 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 03:55:11.183 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:29:19.374 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:29:21.534 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:29:21.742 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:29:21.932 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:29:22.135 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:33:11.694 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:34:13.853 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 04:34:13.859 HYPERVISOR: exec_cmd: vm stop R4-P 
+Oct 27 04:34:18.580 VM: VM R4-P shutdown.
+Oct 27 04:34:18.659 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:34:25.933 HYPERVISOR: exec_cmd: vm get_status R4-P 
+Oct 27 04:34:25.939 HYPERVISOR: exec_cmd: vm extract_config R4-P 
+Oct 27 04:34:25.951 HYPERVISOR: exec_cmd: vm delete R4-P 
+Oct 27 04:34:25.951 VM: VM R4-P destroyed.
+Oct 27 04:34:25.969 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 27 04:34:26.335 HYPERVISOR: Stopped.
+Oct 27 04:34:26.335 GENERAL: reset done.

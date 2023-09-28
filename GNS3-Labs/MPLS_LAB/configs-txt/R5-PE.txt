@@ -1,0 +1,148 @@
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname R5-PE
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition 101:AMZEC2
+ rd 5.5.5.5:1
+ !
+ address-family ipv4
+  route-target export 5.5.5.5:101
+  route-target import 1.1.1.1:101
+ exit-address-family
+!
+vrf definition 102:GOOGNYC
+ rd 5.5.5.5:2
+ !
+ address-family ipv4
+  route-target export 5.5.5.5:102
+  route-target import 1.1.1.1:102
+ exit-address-family
+!
+enable secret 5 $1$jx9f$wrqGLgLTO6JLNi9FZySpK/
+!
+no aaa new-model
+ip cef
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+no ipv6 cef
+!
+!
+mpls label range 500 600
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 5.5.5.5 255.255.255.255
+!
+interface FastEthernet0/0
+ description AMZEC2
+ vrf forwarding 101:AMZEC2
+ ip address 192.168.202.1 255.255.255.252
+ speed auto
+ duplex full
+!
+interface FastEthernet0/1
+ description GOOGNYC
+ vrf forwarding 102:GOOGNYC
+ ip address 192.168.202.1 255.255.255.252
+ speed auto
+ duplex auto
+!
+interface GigabitEthernet4/0
+ ip address 10.45.0.5 255.255.255.0
+ ip ospf 10 area 0
+ negotiation auto
+ mpls ip
+!
+router ospf 10
+ router-id 5.5.5.5
+ network 5.5.5.5 0.0.0.0 area 0
+!
+router rip
+ version 2
+ !
+ address-family ipv4 vrf 101:AMZEC2
+  redistribute bgp 5500 metric 5
+  network 192.168.202.0
+  no auto-summary
+ exit-address-family
+!
+router bgp 5500
+ bgp log-neighbor-changes
+ neighbor 1.1.1.1 remote-as 5500
+ neighbor 1.1.1.1 update-source Loopback0
+ !
+ address-family vpnv4
+  neighbor 1.1.1.1 activate
+  neighbor 1.1.1.1 send-community extended
+  neighbor 1.1.1.1 next-hop-self
+ exit-address-family
+ !
+ address-family ipv4 vrf 101:AMZEC2
+  redistribute rip
+ exit-address-family
+ !
+ address-family ipv4 vrf 102:GOOGNYC
+  neighbor 192.168.202.2 remote-as 5501
+  neighbor 192.168.202.2 activate
+ exit-address-family
+!
+ip forward-protocol nd
+!
+!
+ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ password cisco
+ logging synchronous
+ login
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ exec-timeout 0 0
+ password cisco
+ logging synchronous
+ login
+!
+!
+end

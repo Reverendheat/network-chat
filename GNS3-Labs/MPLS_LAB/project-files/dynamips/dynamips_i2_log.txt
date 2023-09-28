@@ -1,0 +1,66 @@
+Oct 27 00:39:10.275 HYPERVISOR: Release 0.2.15-amd64/Darwin (tag 2015060118)
+Oct 27 00:39:10.278 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 62757.
+Oct 27 00:39:10.342 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 27 00:39:10.348 HYPERVISOR: exec_cmd: hypervisor uuid 
+Oct 27 00:39:10.350 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips 
+Oct 27 00:39:10.350 GENERAL: working_dir=/Users/Gautam/GNS3/projects/MPLS_LAB/project-files/dynamips
+Oct 27 00:39:10.352 HYPERVISOR: exec_cmd: vm create R2-P 2 c7200 
+Oct 27 00:39:10.353 VM: VM R2-P created.
+Oct 27 00:39:10.360 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2-P 2001 
+Oct 27 00:39:10.367 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2-P 
+Oct 27 00:39:10.372 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:10.376 HYPERVISOR: exec_cmd: vm slot_add_binding R2-P 0 0 C7200-IO-FE 
+Oct 27 00:39:10.380 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:10.384 HYPERVISOR: exec_cmd: vm set_idle_pc R2-P 0x63184dd4 
+Oct 27 00:39:10.387 HYPERVISOR: exec_cmd: vm set_ram R2-P 512 
+Oct 27 00:39:10.391 HYPERVISOR: exec_cmd: vm set_ios R2-P /Users/Gautam/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 27 00:39:10.395 HYPERVISOR: exec_cmd: vm set_nvram R2-P 512 
+Oct 27 00:39:10.399 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2-P ca02.0f85.0000 
+Oct 27 00:39:10.404 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:10.408 HYPERVISOR: exec_cmd: vm slot_add_binding R2-P 2 0 PA-GE 
+Oct 27 00:39:10.411 HYPERVISOR: exec_cmd: vm set_disk0 R2-P 0 
+Oct 27 00:39:10.417 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:10.422 HYPERVISOR: exec_cmd: vm slot_add_binding R2-P 1 0 PA-GE 
+Oct 27 00:39:10.435 HYPERVISOR: exec_cmd: vm set_config R2-P configs/i2_startup-config.cfg 
+Oct 27 00:39:10.490 HYPERVISOR: exec_cmd: nio create_udp udp-6a42b55f-d384-44ce-a0a5-40fad5935d5a 10000 127.0.0.1 10002 
+Oct 27 00:39:10.502 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2-P 1 0 udp-6a42b55f-d384-44ce-a0a5-40fad5935d5a 
+Oct 27 00:39:10.505 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:10.528 HYPERVISOR: exec_cmd: nio create_udp udp-9116bcfd-9f79-42be-967b-b7f8f4949cdc 10001 127.0.0.1 10003 
+Oct 27 00:39:10.544 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2-P 2 0 udp-9116bcfd-9f79-42be-967b-b7f8f4949cdc 
+Oct 27 00:39:10.558 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:21.492 HYPERVISOR: exec_cmd: vm set_ghost_status R2-P 2 
+Oct 27 00:39:21.495 HYPERVISOR: exec_cmd: vm set_ghost_file R2-P c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 27 00:39:21.497 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 00:39:21.498 HYPERVISOR: exec_cmd: vm start R2-P 
+Oct 27 00:43:27.174 HYPERVISOR: exec_cmd: nio bind_filter udp-6a42b55f-d384-44ce-a0a5-40fad5935d5a 2 capture 
+Oct 27 00:43:27.175 HYPERVISOR: exec_cmd: nio setup_filter udp-6a42b55f-d384-44ce-a0a5-40fad5935d5a 2 en10mb /Users/Gautam/GNS3/projects/MPLS_LAB/project-files/captures/R2-P_GigabitEthernet1-0_to_R1-PE_GigabitEthernet1-0.pcap 
+Oct 27 02:16:34.747 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 02:16:34.751 HYPERVISOR: exec_cmd: vm stop R2-P 
+Oct 27 02:16:38.139 VM: VM R2-P shutdown.
+Oct 27 02:16:38.142 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 02:18:01.369 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 02:18:01.377 HYPERVISOR: exec_cmd: vm start R2-P 
+Oct 27 02:40:24.064 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 02:56:47.592 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 03:29:44.040 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 03:54:46.356 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 03:54:49.133 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 03:54:51.923 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 03:55:11.197 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:29:19.396 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:29:21.549 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:29:21.760 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:29:21.949 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:29:22.152 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:33:11.724 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:34:18.139 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 04:34:18.157 HYPERVISOR: exec_cmd: vm stop R2-P 
+Oct 27 04:34:21.875 VM: VM R2-P shutdown.
+Oct 27 04:34:21.877 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:34:25.930 HYPERVISOR: exec_cmd: vm get_status R2-P 
+Oct 27 04:34:25.937 HYPERVISOR: exec_cmd: vm extract_config R2-P 
+Oct 27 04:34:25.944 HYPERVISOR: exec_cmd: vm delete R2-P 
+Oct 27 04:34:25.944 VM: VM R2-P destroyed.
+Oct 27 04:34:25.964 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 27 04:34:25.980 HYPERVISOR: Stopped.
+Oct 27 04:34:25.981 GENERAL: reset done.
